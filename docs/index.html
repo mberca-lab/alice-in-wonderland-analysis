@@ -102,8 +102,8 @@
     nav a:hover { color: var(--cp-accent); }
     nav a[aria-current="location"] { color: var(--cp-accent); border-color: var(--cp-accent); }
     .theme-toggle { border: 1px solid var(--cp-border); padding: 6px 10px; border-radius: 10px; font-size: 12px; background: var(--cp-bg-elevated); }
-    .hero { padding: 64px 0 0; position: relative; }
-    .hero-rabbit { position: absolute; top: 24px; right: calc(100% + 24px); width: clamp(40px, calc((100vw - 1184px) / 2 - 48px), 152px); height: auto; color: var(--cp-accent); opacity: .075; pointer-events: none; }
+    .hero { padding: 112px 0 0; position: relative; }
+    .hero-rabbit { --rabbit-size: 48px; position: absolute; top: 24px; left: 0; width: var(--rabbit-size); height: auto; color: var(--cp-accent); opacity: .55; pointer-events: none; }
     .hero-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 72px; align-items: center; }
     h1, h2, h3, .serif { font-family: Georgia, "Times New Roman", serif; font-weight: 400; }
     h1 { font-size: clamp(56px, 6.7vw, 92px); line-height: .99; letter-spacing: -.065em; margin: 28px 0; }
@@ -285,9 +285,13 @@
     .enter { animation: enter .6s ease both; }
     .original-card.enter { animation-delay: .12s; }
     @keyframes enter { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+    @media (prefers-reduced-motion: no-preference) {
+      .hero-rabbit { animation: rabbit-cross 3.8s .4s ease-in-out both, rabbit-hop .38s .4s ease-in-out 10; }
+      @keyframes rabbit-cross { from { left: 0; } to { left: calc(100% - var(--rabbit-size)); } }
+      @keyframes rabbit-hop { 0%, 100% { transform: translateY(0) rotate(-4deg); } 50% { transform: translateY(-7px) rotate(3deg); } }
+    }
     @media (max-width: 1399px) {
-      .hero { padding-top: 112px; }
-      .hero-rabbit { top: 20px; left: 0; right: auto; width: 44px; }
+      .hero-rabbit { --rabbit-size: 44px; top: 20px; }
     }
     @media (max-width: 1050px) {
       nav { gap: 16px; }
@@ -307,7 +311,7 @@
       nav a { display: none; }
       nav { gap: 0; }
       .hero { padding-top: 96px; }
-      .hero-rabbit { top: 16px; width: 36px; }
+      .hero-rabbit { --rabbit-size: 36px; top: 16px; }
       .hero-grid { grid-template-columns: 1fr; gap: 36px; }
       h1 { font-size: 70px; margin: 24px 0; }
       .hero-copy { font-size: 16px; }
