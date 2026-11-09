@@ -3,7 +3,7 @@
 ### Two words, a Python dictionary, and a very curious book.
 
 <p align="center">
-  <a href="https://mbc81.github.io/alice-in-wonderland-analysis/">
+  <a href="https://mberca-lab.github.io/alice-in-wonderland-analysis/">
     <img src="docs/assets/wonderland-cover.png" width="420" alt="Wonderland, Measured: a gold keyhole frames Rabbit word counts across twelve chapters, with Alice watching a rabbit enter a glowing passage. Visit the interactive reading room.">
   </a>
 </p>
@@ -19,7 +19,7 @@ all the way back to the text—or just stop for a little tea.
 Underneath, this is a **reproducible Python 3 text-analysis project**: explicit
 counting rules, source provenance, JSON/CSV evidence, and focused tests.
 
-**[Visit the reading room](https://mbc81.github.io/alice-in-wonderland-analysis/)** · **[Offline HTML](docs/index.html)** · **[Methodology](METHODOLOGY.md)** ·
+**[Visit the reading room](https://mberca-lab.github.io/alice-in-wonderland-analysis/)** · **[Offline HTML](docs/index.html)** · **[Methodology](METHODOLOGY.md)** ·
 **[From the original project](EVOLUTION.md)** · **[Source and rights](data/README.md)**
 
 > **An open reading room, online or offline.** Explore the live story above,
@@ -190,7 +190,7 @@ implementation preserves the original analytical questions without publishing
 the private source document.
 
 The public repository is
-[Mbc81/alice-in-wonderland-analysis](https://github.com/Mbc81/alice-in-wonderland-analysis).
+[mberca-lab/alice-in-wonderland-analysis](https://github.com/mberca-lab/alice-in-wonderland-analysis).
 GitHub Pages serves the committed `docs/` directory from `main`.
 To publish your own copy, select **Settings → Pages → Deploy from a branch →
 `main` → `/docs`** in your repository. Only publish source material and code
